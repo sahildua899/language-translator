@@ -31,7 +31,8 @@ fromText.addEventListener("keyup", () => {
     }
 });
 
-translateBtn.addEventListener("click", () => {
+
+fromText.addEventListener('input', ()=> {
     let text = fromText.value.trim(),
     translateFrom = selectTag[0].value,
     translateTo = selectTag[1].value;
@@ -50,7 +51,8 @@ translateBtn.addEventListener("click", () => {
         alert("Something went wrong!");
         toText.setAttribute("placeholder", "Translation");
     });
-});
+})
+
 
 icons.forEach(icon => {
     icon.addEventListener("click", ({target}) => {
